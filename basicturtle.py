@@ -20,14 +20,16 @@ def Rect(x,y,size=30,clr='black'):
     
 #########รันโปรแกรมด้านล่างนี้#########
 allcolor = ['red','green','blue','orange']
-for i in range(10):
+
+count = int(input('อยากได้สี่เหลี่ยมเท่าไร?: '))
+#รับจำนวนจาก user ว่าต้องการจำนวนเท่าไร
+
+for i in range(count):
     x = random.randint(-200,200)
     y = random.randint(-200,200)
     print(x,y)
     select_color = random.choice(allcolor)
     Rect(x,y,40,select_color)
-
-
 
 
 
