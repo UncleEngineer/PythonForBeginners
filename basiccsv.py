@@ -12,5 +12,20 @@ def WriteCSV(data):
 		fw.writerow(data)
 	print('Done!')
 
-product = ['แอปเปิ้ล',20]
-WriteCSV(product)
+
+def ReadCSV():
+	with open('data.csv',newline='',encoding='utf-8') as file:
+		fr = csv.reader(file) # file reader
+		data = list(fr)
+
+	return data
+
+alldata = ReadCSV()
+#print(alldata)
+
+for dt in alldata:
+	print(dt)
+
+
+# product = ['แอปเปิ้ล',20]
+# WriteCSV(product)
